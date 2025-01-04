@@ -1,0 +1,25 @@
+IMPORTANT KEYS
+-MLSW is the DHCP server
+ip addresses to use
+- guests: 192.168.1.0/24
+- it, hr, sales: 172.162.10.0/24 (subnet accordingly)
+-DO NOT statically assign ip addresses as correctly configuring
+DHCP should make that easier
+
+
+1. Enable DHCP on PCs. If DHCP fails, troubleshoot accordingly
+2. Create ACL using the following requirements
+- GUESTS should not be able to communicate with HR and IT...
+they should not be able to access the DARKWEB and COMPANYRESOURCES
+- HR should not be able to communicate with the guests
+they shoud not be able to access the DARKWEB
+- SALES should not be allowed to communicate with HR and IT
+they should not be allowed access to the DARKWEB
+- the IT department is allowed free access and communication accross the 
+network.
+
+courtesy: frank.io
+
+EXPECTED RESULT(S)
+- dynamic address assignment via DHCP
+- selectively restricted access to all segments of the network as required

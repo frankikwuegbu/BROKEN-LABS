@@ -1,0 +1,26 @@
+IMPORTANT KEYS
+- R1 is the DHCP server
+- vlan 10 192.168.3.0/28
+- vlan 20 192.168.3.16/28
+
+1. configure ssh on R1, R2 and SW2 to allow remote access from workstation
+
+NOTE
+- all configurations from this point MUST be carried out remotely from the WORKSTATION laptop
+- statically assigning IP address and default gate to PCs is NOT ALLOWED as 
+  proper configuration and troubleshooting will allow DHCP do this automatically.
+
+2.REMOTELY configure VLAN 10 and VLAN20 on the appropriate switch interface(s)
+- f0/2-4 VLAN10
+- f0/5-7 VLAN20
+3.REMOTELY configure router on a stick on R2 to allow for inter-vlan routing
+3.Enable DHCP on the PCs.
+- If network configurations are given then the lab is solved (unlikely lol)
+- if configurations fail, TROUBLESHOOT!
+
+courtesy: frank.io
+
+EXPECTED RESULTS
+- remote access to R1, R2, SW2 from the WORKSTATION
+- DHCP assigns network configs to PCS in VLAN10 and VLAN20
+- inter vlan communication
